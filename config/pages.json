@@ -1,0 +1,23 @@
+[
+    {
+        "slug":"home",
+        "title":"Home"
+    },
+    {
+        "slug":"about",
+        "title":"About us",
+        "template": "about"
+    },
+    {
+        "slug":"contact",
+        "title":"Контакты",
+        "template": "contact",
+        "editor": true
+    },
+    {
+        "slug":"news",
+        "title":"News",
+        "template": "news",
+        "editor": false
+    }
+]

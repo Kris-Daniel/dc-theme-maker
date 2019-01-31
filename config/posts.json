@@ -1,0 +1,12 @@
+[
+    {
+        "slug":"news",
+        "title":"News",
+        "admin_name": "News",
+        "icon": "dashicons-media-spreadsheet",
+        "url": true,
+        "index": true,
+        "editor": true,
+        "hierarchical": false
+    }
+]

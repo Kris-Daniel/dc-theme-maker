@@ -1,0 +1,29 @@
+[
+	{
+		"slug": "type",
+		"title": "Категории",
+		"scope": ["news"],
+		"radio": true,
+		"edit": false,
+		"terms":  [
+			{
+				"slug": "old",
+				"title": "Old"
+			},
+			{
+				"slug": "new",
+				"title": "New",
+				"children": [
+					{
+						"slug": "today",
+						"title": "Today"
+					},
+					{
+						"slug": "now",
+						"title": "Now"
+					}
+				]
+			}
+		]
+	}
+]
