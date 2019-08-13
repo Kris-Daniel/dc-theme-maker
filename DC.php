@@ -108,7 +108,7 @@ class DC
 		$this->pagination->createPagination();
 	}
 
-	public function createMenu($scope, $css)
+	public function createMenu($scope, $css = false)
 	{
 		$this->menu->createMenu($scope, $css);
 	}
@@ -121,8 +121,8 @@ class DC
 	        echo($shortContent);
 	    } else {
 	        print_r($content);
-    }
-}
+	    }
+	}
 
 	/* Helpfull public functions */
 

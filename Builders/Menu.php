@@ -14,9 +14,10 @@ class Menu
 	{
 		
 	}
-	public function createMenu($scope, $css)
+	public function createMenu($scope, $css = false)
 	{
 		try {
+			$css = !$css ? $scope : $css;
 			$this->dc_menu = array();
 			$this->wp_menu = wp_get_nav_menu_items($scope);
 			foreach ($this->wp_menu as $item) {
