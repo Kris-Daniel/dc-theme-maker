@@ -46,10 +46,9 @@ class Menu
 			for($i = 0; $i < $len; $i++) {
 				if($dcMenu[$i]['id'] == $item->menu_item_parent) {
 					$dcMenu[$i]['children'][] = $this->menuInstance($item);
-					return false;
+					break;
 				} elseif(isset($dcMenu[$i]['children'])) {
 					$this->findParent($item, $dcMenu[$i]['children']);
-					return false;
 				}
 			}
 		} catch (Exception $e) { die($e); }
