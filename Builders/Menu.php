@@ -18,12 +18,15 @@ class Menu
 	{
 		try {
 			$css = !$css ? $scope : $css;
+			$locations = get_nav_menu_locations();
 			$this->dc_menu = array();
-			$this->wp_menu = wp_get_nav_menu_items($scope);
-			foreach ($this->wp_menu as $item) {
-				$this->itemCheck($item);
+			if(isset($locations[ $scope ])) {
+				$this->wp_menu = wp_get_nav_menu_items($locations[ $scope ]);
+				foreach ($this->wp_menu as $item) {
+					$this->itemCheck($item);
+				}
+				$this->render($css);
 			}
-			$this->render($css);
 		} catch (Exception $e) { die($e); }
 	}
 
