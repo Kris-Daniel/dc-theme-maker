@@ -98,9 +98,11 @@ class DC
 	{
 		return get_template_directory_uri() . '/assets/img/' . $file;
 	}
+	
 	public function file($file)
 	{
-		echo file_get_contents($this->file_url($file));
+		$fileUrl = get_stylesheet_directory() . "/assets/img/" . $file;
+		echo file_exists($fileUrl) ? file_get_contents($fileUrl) : "";
 	}
 
 	public function createPagination()
